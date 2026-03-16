@@ -1,0 +1,94 @@
+/* Reset default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #0d0d0d;
+  color: #ffcc00;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Search Bar Styling */
+#searchBar {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 20px;
+  width: 60%;
+  max-width: 500px;
+  border: 2px solid #ffcc00;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchBar:focus {
+  border-color: #00e6e6;
+  box-shadow: 0 0 12px #00e6e6;
+}
+
+/* Gallery Section */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+#gallery h2 {
+  width: 100%;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Gallery Images */
+#gallery img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+#gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #searchBar {
+    width: 80%;
+  }
+  #gallery img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery img {
+    width: 120px;
+  }
+}
