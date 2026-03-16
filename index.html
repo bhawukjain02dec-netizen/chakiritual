@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chakiritual - Anime Hub</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Chakiritual</h1>
+    <p>Where Chakra, Haki, and Spiritual Energy Unite</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#big3">Big 3</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Chakiritual</h2>
+    <p>This is your ultimate anime hub dedicated to the Big 3: Naruto, One Piece, and Bleach. Explore their worlds, powers, and legends.</p>
+  </section>
+
+  <!-- Big 3 Section -->
+  <section id="big3">
+    <h2>The Big 3</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Naruto</h3>
+        <p>Discover the world of ninjas, chakra, and the journey to become Hokage.</p>
+      </div>
+      <div class="card">
+        <h3>One Piece</h3>
+        <p>Set sail with Luffy and his crew in search of the legendary treasure.</p>
+      </div>
+      <div class="card">
+        <h3>Bleach</h3>
+        <p>Enter the Soul Society and witness the battles of Shinigami and Hollows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Anime Gallery</h2>
+    <input type="text" id="searchBar" placeholder="Search anime...">
+    <div class="gallery">
+      <img src="images/naruto.jpg" alt="Naruto">
+      <img src="images/onepiece.jpg" alt="One Piece">
+      <img src="images/bleach.jpg" alt="Bleach">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Chakiritual. All rights reserved.</p>
+  </footer>
+
+  <!-- Search Script -->
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const images = document.querySelectorAll("#gallery img");
+
+    searchBar.addEventListener("keyup", function() {
+      const query = searchBar.value.toLowerCase();
+      images.forEach(img => {
+        const altText = img.alt.toLowerCase();
+        img.style.display = altText.includes(query) ? "inline" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
