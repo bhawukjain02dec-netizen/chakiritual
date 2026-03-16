@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <input type="text" id="searchBar" placeholder="Search anime...">
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Anime Gallery</h2>
+    <img src="naruto.jpg" alt="Naruto">
+    <img src="onepiece.jpg" alt="One Piece">
+    <img src="bleach.jpg" alt="Bleach">
+  </section>
+
+  <script src="script.js"></script>
+
+  <!-- Inline script for search functionality -->
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const images = document.querySelectorAll("#gallery img");
+
+    searchBar.addEventListener("keyup", function() {
+      const query = searchBar.value.toLowerCase();
+      images.forEach(img => {
+        const altText = img.alt.toLowerCase();
+        if (altText.includes(query)) {
+          img.style.display = "inline";
+        } else {
+          img.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
