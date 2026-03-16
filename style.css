@@ -36,6 +36,10 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+header img.logo {
+  width: 80px;
+  height: auto;
+}
 header p {
   font-size: 20px;
   color: #ffccff;
